@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>count</title>
+    <style>
+        .conuts{
+            width: 150px;
+            height: 200px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 15px;
+         
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            align-items: center;
+        }
+    .btn{
+    margin-left: 20px;
+
+      
+    }
+    h1{
+        color: white;
+        text-align: center;
+    }
+    .increese{
+        margin: 4px;
+    }
+    button{
+        padding: 10px;
+        width: 35px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+    }
+      p{
+        
+    
+       font-size: 20px;
+       border: 1px solid white;
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       text-align: center;
+       margin-left: 3.5rem;
+       background: white;
+       line-height: 1.9;
+       margin-top: 15px;
+      }
+     
+    </style>
+</head>
+<body>
+    <div class="conuts">
+        <h1>counter</h1>
+        <p><span class="text value">0</span></p>
+        <div class="btn">
+            <button class="increase text">+</button>
+            <button class="zero">0</button>
+            <button class="decrease text">-</button>
+        </div>
+    </div>
+
+    <script>
+        let value=document.querySelector(".value")
+        let increeses=document.querySelector(".increase")
+        let decreases=document.querySelector(".decrease")
+        let zero=document.querySelector(".zero")
+        count=0;
+
+        increeses.addEventListener("click",()=>{
+            value.textContent=count++;
+            value.style.color="green"
+            value.style.fontWeight="bold"
+        })
+       
+        decreases.addEventListener("click",()=>{
+            value.innerHTML=count--
+            value.style.color="red"
+             value.style.fontWeight="bold"
+        })
+        zero.addEventListener("click",()=>{
+            value.textContent=0;
+             value.style.color="black"
+        })
+
+    </script>
+</body>
+</html>
