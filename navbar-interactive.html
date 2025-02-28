@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar_interactive</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+
+        .nav{
+            display: flex;
+            background-color: black;
+            width: 100%;
+            padding: 10px;
+            
+        }
+        .nav li{
+            padding-left: 3rem;
+            list-style: none;
+            color: white;
+            position: relative;
+          
+        }
+        .nav-list{
+            position: absolute;
+            top: 35px;
+            left: 70px;
+            width: 50px;
+            display: block;
+    
+            
+        }
+        .nav-list li{
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            color: black;
+         padding-right: 4rem;
+         cursor: pointer;
+        padding-top:1rem ;
+    }
+        
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>Home</li>
+        <li class="menuabout">About</li>
+        <ul class="nav-list">
+            <li>html</li>
+            <li>css</li>
+            <li>js</li>
+        </ul>
+        <li>Login</li>
+        <li>Logo</li>
+    </ul>
+
+    <script>
+        let menuabout=document.querySelector(".menuabout")
+        let navlist=document.querySelector(".nav-list")
+
+        menuabout.addEventListener("mouseenter",()=>{
+            navlist.style.display="block"
+        })
+        menuabout.addEventListener("mouseleave",()=>{
+            navlist.style.display="none"
+
+        })
+    </script>
+</body>
+</html>
