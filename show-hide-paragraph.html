@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show and hide</title>
+    <style>
+        button{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 5rem;
+            cursor: pointer;
+            border-radius: 10px;
+            color: rgb(252, 252, 252);
+            background-color: rgb(1, 2, 1);
+            border: none;
+            margin: 1rem;
+            margin-left: 20rem;
+        }
+        .text{
+       
+            display: none;
+          
+        }
+        p{
+            font-size: 20px;
+            border: 1px solid rgb(247, 240, 240);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .hide{
+            display: none;
+        }
+        .container{
+            border: 1px solid rgb(212, 212, 208);
+            margin: 1rem;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(39, 165, 106);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">show/hide</button>
+        <p class="text">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Exercitationem, error?</p>
+    
+    </div>
+    <div class="container">
+        <button class="btns">show/hide</button>
+        <p class="hide">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Exercitationem, error?</p>
+    
+    </div>
+   
+  
+        <script>
+            let btn=document.querySelector(".btn");
+            let text=document.querySelector(".text");
+            let btns=document.querySelector(".btns");
+            let hide=document.querySelector(".hide");
+
+            
+            btn.addEventListener("click",()=>{
+                text.classList.toggle("text");
+            })
+
+            btns.addEventListener("click",()=>{
+                hide.classList.toggle("hide");
+            })
+            </script>
+</body>
+</html>

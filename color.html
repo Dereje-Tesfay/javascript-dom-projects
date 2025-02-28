@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+        .text{
+            font-size: 20px;
+            font-family: arial, sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p class="text">Lorem ipsum dolor sit amet consectetur
+     adipisicing elit. Nisi tenetur beatae iste iusto non
+      aut voluptates consectetur, asperiores eaque dolorem 
+      repudiandae soluta ducimus ratione distinctio nesciunt at? 
+      Ipsam facere fugiat sint maiores odio enim. Autem ducimus qui,
+       sed quas dolor quidem. 
+    Unde quidem odit reiciendis facere esse pariatur a ipsam? 
+    </p>
+    <p>color code <span id="colorcode">#</span></p>
+    <input type="color" id="colorbox">
+</body>
+<script>
+let text=document.querySelector('.text');
+let colorbox=document.querySelector('#colorbox');
+let colorcode=document.querySelector('#colorcode');
+window.addEventListener("click", ()=>{
+    text.style.color=colorbox.value;
+    colorcode.textContent=colorbox.value;
+})
+    
+</script>
+</html>
