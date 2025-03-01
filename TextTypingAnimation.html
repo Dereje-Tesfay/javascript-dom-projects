@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextTypingAnimation</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+       
+
+        }
+        li{
+            font-size: 75px;
+            margin-right: 20px;
+            list-style: none; 
+            color: dodgerblue;
+        }
+        .text{
+            
+            font-size: 75px;
+            border-right: 3px solid black;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;;
+            color: rgb(0, 0, 0);
+            animation: typing 7s steps(15) infinite,
+            cursor .5s step-end infinite;
+        
+        }
+        @keyframes typing{
+           0%,100%{
+                width: 0;
+            }
+            60%,80%{
+                width:43%;
+                color: rgb(255, 0, 0);
+               text-shadow: 10px 10px 10px blue;
+
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <li>I am  </li>
+        <p class="text">Developer</p>
+   
+</body>
+</html>
