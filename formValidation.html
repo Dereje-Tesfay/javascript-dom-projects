@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        .container {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        form {
+           
+            border: 1px solid rgb(235, 229, 229);
+            padding: 2rem;
+            height: 370px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 26px rgb(223, 170, 223);
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #email{
+          
+            width: 210px;
+        }
+        label{
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        h1{
+            text-align: center;
+            color: indigo;
+        }
+        .inputs{
+            margin-left: 2rem;
+        }
+        button{
+            padding: 10px;
+            width: 100px;
+            background: green;
+            border: none;
+            margin-left: 5rem;
+            color: white;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="total">
+            
+                <p class=""></p>
+                <form action="">
+                    <h1>login page</h1>
+            
+            
+                    <div class="inputs">
+                        <label for="username">UserName:</label>
+                        <input type="text" id="user">
+                    </div><br>
+                    <div class="inputs">
+                        <label for="password">Password:</label>
+                        <input type="password" id="pass">
+                    </div><br>
+            
+                    <div class="inputs">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email">
+                    </div><br>
+                    <button>login</button>
+                </form>
+        </div>
+    </div>
+    <script>
+        const user="dereje";
+        const pass="1234";
+        var emails="dereje383@gmail.com";
+        let username=document.querySelector("#user");
+        let password=document.querySelector("#pass");
+        let email=document.querySelector("#email");
+        let btn=document.querySelector("button");
+        let msg=document.querySelector("p");
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            if(username.value==user&&password.value==pass&&email.value==emails){
+                msg.textContent="Login is successfull.";
+                msg.style.color="green";
+                msg.style.textAling="center";
+                window.location.href="https://github.com/dereje-tesfay";
+
+            }
+            else{
+                msg.innerHTML="Incorrect username or password or email.";
+                msg.style.color="red";
+                msg.style.textAling="center";
+            }
+
+
+
+        })
+    </script>
+</body>
+
+</html>
