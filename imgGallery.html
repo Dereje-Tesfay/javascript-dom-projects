@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <style>
+        body{
+            background: #191919;
+        }
+  .gallery{
+            width: 900px;
+            display: flex;
+            overflow-x: scroll;
+        }
+        .gallery div{
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-gap:20px;
+            padding: 10px;
+            flex: none;
+        }
+        img{
+            height: 700px;
+            transition: transform 0.6s;
+        }
+        .gallery::-webkit-scrollbar{
+            display: none;
+        }
+        #backbtn {
+            width: 50px;
+            height: 50px;
+        }
+      
+        #nextbtn {
+            width: 50px;
+            height: 50px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .gallery div img:hover{
+            filter: grayscale(0);
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="nextbtn" src="./image/back.jpg" alt="">
+        <div class="gallery">
+            <div>
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+            </div>
+            <div>
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+                <img src="./image/photo_2024-05-09_05-56-11.jpg" alt="">
+            </div>
+            
+        </div>
+
+        <img id="backbtn" src="./image/next.jpg" alt="">
+    </div>
+
+    <script>
+        const gallery=document.querySelector('.gallery');
+        const nextbtn=document.querySelector('#nextbtn');
+        const backbtn=document.querySelector('#backbtn');
+    
+        nextbtn.addEventListener("click",()=>{
+            gallery.style.scrollBehavior="smooth";
+            gallery.scrollLeft+=500;
+        })
+        backbtn.addEventListener("click",()=>{
+            gallery.style.scrollBehavior="smooth";
+            gallery.scrollLeft-=500;
+        })
+    </script>
+</body>
+</html>
