@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+      .light{
+            background: #fff;
+            color: #000;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+     .con{
+            background: red;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="light">
+    <button class="color">Toggle Background</button>
+    <div class="con"></div>
+    <button class="btn">div</button>
+    <script>
+        const colorButton = document.querySelector(".color");
+        const body = document.querySelector("body");
+
+        colorButton.addEventListener("click", () => {
+            body.classList.toggle("light");
+        });
+
+       let conbtn=document.querySelector(".btn");
+       let divcon=document.querySelector(".con");
+       conbtn.addEventListener("click",()=>{
+        divcon.classList.toggle("con");
+       });
+    </script>
+</body>
+</html>
